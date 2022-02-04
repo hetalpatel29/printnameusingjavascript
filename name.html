@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        .maindivision {
+            margin: auto;
+            height: 350px;
+            width: 550px;
+            border: 2px solid gray;
+            margin-top: 50px;
+        }
+        
+        .textbox {
+            margin-top: 50px;
+            height: 40px;
+            width: 200px;
+            background-color: rgba(128, 128, 128, 0.137);
+            border: 1px solid gray;
+            text-align: center;
+            margin-left: 30px;
+        }
+        
+        .heading {
+            margin-left: 30px;
+        }
+        
+        button {
+            height: 40px;
+            width: 150px;
+            background-color: darkcyan;
+            text-align: center;
+            color: white;
+            border: none;
+            margin-left: 170px;
+            margin-top: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maindivision">
+        <input type="text" class="textbox" id="textname">
+        <input type="text" class="textbox" id="textsurname">
+
+
+        <button type="button" onclick="buttonclick()">CLICK ME</button>
+
+        <h1 id="name" class="heading">Lorem ipsum dolor sit amet.</h1>
+        <h1 id="surname" class="heading">Lorem ipsum dolor sit amet.</h1>
+
+        <h1 id="fullname" class="heading">Lorem ipsum dolor sit amet.</h1>
+
+
+    </div>
+
+
+    <script>
+        function buttonclick() {
+            let tname = document.getElementById("textname");
+            let sname = document.getElementById("textsurname");
+
+
+            let hname = document.getElementById("name");
+            let hsname = document.getElementById("surname");
+            let hfullname = document.getElementById("fullname");
+
+            console.log("hfullname");
+
+
+            hname.innerText = "Your Firstname is : " + tname.value;
+            hsname.innerText = "Your Lastname is : " + sname.value;
+            hfullname.innerText = "Your Fullname is : " + tname.value + sname.value;
+
+
+        }
+    </script>
+</body>
+
+</html>
